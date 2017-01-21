@@ -34,7 +34,6 @@
 				UNITY_FOG_COORDS(1)
 				float4 vertex : SV_POSITION;
 				float4 worldSpacePos : TEXCOORD6;
-				float4 viewSpacePos : TEXCOORD7;
 			};
 
 			sampler2D _MainTex;
@@ -43,20 +42,28 @@
 			// FUCK ALL OF UNITY. DIE IN HELL
 			float _SonarRadius;
 			float4 _SonarDirection;
+			float4 _SonarPosition;
 			float _SonarRadius1;
 			float4 _SonarDirection1;
+			float4 _SonarPosition1;
 			float _SonarRadius2;
 			float4 _SonarDirection2;
+			float4 _SonarPosition2;
 			float _SonarRadius3;
 			float4 _SonarDirection3;
+			float4 _SonarPosition3;
 			float _SonarRadius4;
 			float4 _SonarDirection4;
+			float4 _SonarPosition4;
 			float _SonarRadius5;
 			float4 _SonarDirection5;
+			float4 _SonarPosition5;
 			float _SonarRadius6;
 			float4 _SonarDirection6;
+			float4 _SonarPosition6;
 			float _SonarRadius7;
 			float4 _SonarDirection7;
+			float4 _SonarPosition7;
 
 
 			float4 _SonarColor;
@@ -69,7 +76,6 @@
 				v2f o;
 				o.vertex = mul(UNITY_MATRIX_MVP, v.vertex);
 				o.worldSpacePos = mul(UNITY_MATRIX_M, v.vertex);
-				o.viewSpacePos = mul(UNITY_MATRIX_MV, v.vertex);
 				o.uv = TRANSFORM_TEX(v.uv, _MainTex);
 				UNITY_TRANSFER_FOG(o,o.vertex);
 				return o;
@@ -86,10 +92,10 @@
 				return saturate((env + width - 1.0) / width);
 			}
 
-			float sonar(float4 viewSpacePos, float radius, float frontWidth, float tailWidth, float4 direction, float coneFactorBias) {
-				float brightnessTerm = sonarEnvelope(length(viewSpacePos) - radius, frontWidth, tailWidth);
+			float sonar(float4 worldSpacePos, float4 center, float radius, float frontWidth, float tailWidth, float4 direction, float coneFactorBias) {
+				float brightnessTerm = sonarEnvelope(length(worldSpacePos - center) - radius, frontWidth, tailWidth);
 
-				float coneFactor = saturate(dot(normalize(viewSpacePos), direction));
+				float coneFactor = saturate(dot(normalize(worldSpacePos), direction));
 				coneFactor = saturate((coneFactor - coneFactorBias) / (1.0 - coneFactorBias));
 
 				return brightnessTerm;// * coneFactor;
@@ -98,18 +104,18 @@
 			fixed4 frag (v2f i) : SV_Target
 			{
 				float brightness = 0.0;
-				brightness += sonar(i.viewSpacePos, _SonarRadius, _SonarFrontWidth, _SonarTailWidth, _SonarDirection, _SonarConeFactorBias);
-				brightness += sonar(i.viewSpacePos, _SonarRadius1, _SonarFrontWidth, _SonarTailWidth, _SonarDirection1, _SonarConeFactorBias);
-				brightness += sonar(i.viewSpacePos, _SonarRadius2, _SonarFrontWidth, _SonarTailWidth, _SonarDirection2, _SonarConeFactorBias);
-				brightness += sonar(i.viewSpacePos, _SonarRadius3, _SonarFrontWidth, _SonarTailWidth, _SonarDirection3, _SonarConeFactorBias);
-				brightness += sonar(i.viewSpacePos, _SonarRadius4, _SonarFrontWidth, _SonarTailWidth, _SonarDirection4, _SonarConeFactorBias);
-				brightness += sonar(i.viewSpacePos, _SonarRadius5, _SonarFrontWidth, _SonarTailWidth, _SonarDirection5, _SonarConeFactorBias);
-				brightness += sonar(i.viewSpacePos, _SonarRadius6, _SonarFrontWidth, _SonarTailWidth, _SonarDirection6, _SonarConeFactorBias);
-				brightness += sonar(i.viewSpacePos, _SonarRadius7, _SonarFrontWidth, _SonarTailWidth, _SonarDirection7, _SonarConeFactorBias);
-				//brightness += sonar(i.viewSpacePos, _SonarRadius2, _SonarFrontWidth, _SonarTailWidth, _SonarDirection2, _SonarConeFactorBias);
-				//brightness += sonar(i.viewSpacePos, _SonarRadius3, _SonarFrontWidth, _SonarTailWidth, _SonarDirection3, _SonarConeFactorBias);
+				brightness += sonar(i.worldSpacePos, _SonarPosition, _SonarRadius, _SonarFrontWidth, _SonarTailWidth, _SonarDirection, _SonarConeFactorBias);
+				brightness += sonar(i.worldSpacePos, _SonarPosition1, _SonarRadius1, _SonarFrontWidth, _SonarTailWidth, _SonarDirection1, _SonarConeFactorBias);
+				brightness += sonar(i.worldSpacePos, _SonarPosition2, _SonarRadius2, _SonarFrontWidth, _SonarTailWidth, _SonarDirection2, _SonarConeFactorBias);
+				brightness += sonar(i.worldSpacePos, _SonarPosition3, _SonarRadius3, _SonarFrontWidth, _SonarTailWidth, _SonarDirection3, _SonarConeFactorBias);
+				brightness += sonar(i.worldSpacePos, _SonarPosition4, _SonarRadius4, _SonarFrontWidth, _SonarTailWidth, _SonarDirection4, _SonarConeFactorBias);
+				brightness += sonar(i.worldSpacePos, _SonarPosition5, _SonarRadius5, _SonarFrontWidth, _SonarTailWidth, _SonarDirection5, _SonarConeFactorBias);
+				brightness += sonar(i.worldSpacePos, _SonarPosition6, _SonarRadius6, _SonarFrontWidth, _SonarTailWidth, _SonarDirection6, _SonarConeFactorBias);
+				brightness += sonar(i.worldSpacePos, _SonarPosition7, _SonarRadius7, _SonarFrontWidth, _SonarTailWidth, _SonarDirection7, _SonarConeFactorBias);
+				//brightness += sonar(i.worldSpacePos, _SonarRadius2, _SonarFrontWidth, _SonarTailWidth, _SonarDirection2, _SonarConeFactorBias);
+				//brightness += sonar(i.worldSpacePos, _SonarRadius3, _SonarFrontWidth, _SonarTailWidth, _SonarDirection3, _SonarConeFactorBias);
 
-				//brightness = sonar(i.viewSpacePos, _SonarRadius, _SonarFrontWidth, _SonarTailWidth, _SonarDirection, _SonarConeFactorBias);
+				//brightness = sonar(i.worldSpacePos, _SonarRadius, _SonarFrontWidth, _SonarTailWidth, _SonarDirection, _SonarConeFactorBias);
 
 				float t = _Time.w * 0.015;
 				float thickness = 0.002;

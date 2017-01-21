@@ -114,7 +114,7 @@ Material:
       second: 0
     - first:
         name: _SonarRadius
-      second: 126.68367
+      second: 185.19083
     - first:
         name: _SonarTailWidth
       second: 20
