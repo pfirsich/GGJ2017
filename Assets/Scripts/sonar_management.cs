@@ -41,7 +41,7 @@ public class sonar_management : MonoBehaviour {
 
     void Update () {
         if(Input.GetButton("ping")) {
-            emitSonar(new Vector4(0.0f, 0.0f, -1.0f, 0.0f));
+            emitSonar(bat.transform.forward);
         }
 
         float dt = Time.deltaTime;
