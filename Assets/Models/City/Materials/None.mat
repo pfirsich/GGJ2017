@@ -6,10 +6,10 @@ Material:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: SonarMaterial
+  m_Name: None
   m_Shader: {fileID: 4800000, guid: dc135b80049b17e4785f4ca956819f04, type: 3}
-  m_ShaderKeywords: _EMISSION _SonarDirection _SonarRadius
-  m_LightmapFlags: 1
+  m_ShaderKeywords: 
+  m_LightmapFlags: 5
   m_CustomRenderQueue: -1
   stringTagMap: {}
   m_SavedProperties:
@@ -108,16 +108,13 @@ Material:
       second: 0
     - first:
         name: _SonarConeFactorBias
-      second: 0.8
+      second: 0.9
     - first:
         name: _SonarFrontWidth
-      second: 4
-    - first:
-        name: _SonarRadius
-      second: 601.0474
+      second: 1
     - first:
         name: _SonarTailWidth
-      second: 30
+      second: 4
     - first:
         name: _SpecularHighlights
       second: 1
@@ -133,19 +130,10 @@ Material:
     m_Colors:
     - first:
         name: _Color
-      second: {r: 1, g: 1, b: 1, a: 1}
+      second: {r: 0.8, g: 0.8, b: 0.8, a: 1}
     - first:
         name: _EmissionColor
       second: {r: 0, g: 0, b: 0, a: 1}
     - first:
         name: _SonarColor
-      second: {r: 0, g: 0.83448267, b: 1, a: 1}
-    - first:
-        name: _SonarDirection
-      second: {r: 0, g: 0, b: -1, a: 0}
-    - first:
-        name: _SonarPosition
-      second: {r: 0, g: 0, b: 0, a: 0}
-    - first:
-        name: _XColor
-      second: {r: 0, g: 0, b: 0, a: 1}
+      second: {r: 1, g: 1, b: 1, a: 1}
