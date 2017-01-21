@@ -21,6 +21,7 @@ GameObject:
   - 4: {fileID: 4000010608748740}
   - 33: {fileID: 33000013729349510}
   - 23: {fileID: 23000013322434982}
+  - 64: {fileID: 64000012751650766}
   m_Layer: 0
   m_Name: Bogen
   m_TagString: Untagged
@@ -35,7 +36,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000010214019912}
   m_LocalRotation: {x: -0.5, y: -0.49999997, z: 0.5, w: 0.50000006}
-  m_LocalPosition: {x: -8, y: -0.5, z: 2.7}
+  m_LocalPosition: {x: -2.5, y: -0.5, z: -0.06}
   m_LocalScale: {x: 500, y: 500, z: 500}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
@@ -76,4 +77,16 @@ MeshFilter:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000010214019912}
+  m_Mesh: {fileID: 4300000, guid: d9f108f77c693c04eaa6ee4f726b52c6, type: 3}
+--- !u!64 &64000012751650766
+MeshCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000010214019912}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Convex: 0
   m_Mesh: {fileID: 4300000, guid: d9f108f77c693c04eaa6ee4f726b52c6, type: 3}

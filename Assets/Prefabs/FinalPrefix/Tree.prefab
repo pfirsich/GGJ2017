@@ -21,6 +21,8 @@ GameObject:
   - 4: {fileID: 4000013085230534}
   - 33: {fileID: 33000011267134208}
   - 23: {fileID: 23000011505744710}
+  - 65: {fileID: 65000012340774150}
+  - 135: {fileID: 135000011149391816}
   m_Layer: 0
   m_Name: Tree
   m_TagString: Untagged
@@ -35,8 +37,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000010664522662}
   m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071067}
-  m_LocalPosition: {x: 10.2, y: 0.6, z: 0.81}
-  m_LocalScale: {x: 10, y: 10, z: 80}
+  m_LocalPosition: {x: -2.02, y: 0.6, z: 2.45}
+  m_LocalScale: {x: 10, y: 10, z: 79.99997}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
@@ -77,3 +79,27 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000010664522662}
   m_Mesh: {fileID: 4300000, guid: 4d5e8d94338603e4391308629f7f402e, type: 3}
+--- !u!65 &65000012340774150
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000010664522662}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.02, y: 0.02, z: 0.02}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!135 &135000011149391816
+SphereCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000010664522662}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.008
+  m_Center: {x: 0, y: 0, z: 0.014}

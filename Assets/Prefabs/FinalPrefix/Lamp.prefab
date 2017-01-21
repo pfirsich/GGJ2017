@@ -21,6 +21,7 @@ GameObject:
   - 4: {fileID: 4000013884215168}
   - 33: {fileID: 33000012107571968}
   - 23: {fileID: 23000010948202338}
+  - 65: {fileID: 65000013504197098}
   m_Layer: 0
   m_Name: Lamp
   m_TagString: Untagged
@@ -35,8 +36,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000011367398290}
   m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071067}
-  m_LocalPosition: {x: 0, y: 2.4, z: 0}
-  m_LocalScale: {x: 10, y: 10, z: 10}
+  m_LocalPosition: {x: 5.88, y: 1.21, z: 1.93}
+  m_LocalScale: {x: 5, y: 5, z: 5}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
@@ -77,3 +78,15 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000011367398290}
   m_Mesh: {fileID: 4300000, guid: bdff8b2c0260b1143b903e597350c837, type: 3}
+--- !u!65 &65000013504197098
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000011367398290}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.03804226, y: 0.04, z: 0.26898625}
+  m_Center: {x: -9.313225e-10, y: 0, z: -0.12449313}

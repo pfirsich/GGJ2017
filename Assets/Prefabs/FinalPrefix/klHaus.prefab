@@ -21,6 +21,8 @@ GameObject:
   - 4: {fileID: 4000013628138020}
   - 33: {fileID: 33000011448963284}
   - 23: {fileID: 23000010668068966}
+  - 65: {fileID: 65000013833467432}
+  - 65: {fileID: 65000013849697312}
   m_Layer: 0
   m_Name: klHaus
   m_TagString: Untagged
@@ -35,8 +37,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000014279409254}
   m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071067}
-  m_LocalPosition: {x: 8.3, y: 0.26, z: 17.1}
-  m_LocalScale: {x: 150, y: 50, z: 75}
+  m_LocalPosition: {x: 4.45, y: 0.42, z: 6.02}
+  m_LocalScale: {x: 150, y: 49.999985, z: 74.99997}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
@@ -77,3 +79,27 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000014279409254}
   m_Mesh: {fileID: 4300000, guid: 4fbe2b611130fa34d8116dfdd7c6a582, type: 3}
+--- !u!65 &65000013833467432
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000014279409254}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.010054296, y: 0.00989578, z: 0.010157467}
+  m_Center: {x: -0.000027103422, y: 0.000020694735, z: 0.000010755861}
+--- !u!65 &65000013849697312
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000014279409254}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.006822303, y: 0.020761857, z: 0.02141356}
+  m_Center: {x: -0.007103783, y: 0.0007715216, z: 0.005638773}
