@@ -119,7 +119,7 @@
 				for(int w = -steps + 1; w < steps; ++w) {
 					waveEffect += sonarEnvelope(_noise + 1.0/steps*w, thickness, thickness);
 				}
-				brightness *= saturate(waveEffect);
+				brightness *= saturate(waveEffect) * 3.0;
 
 				fixed4 col = float4(float3(brightness, brightness, brightness), 1.0) * _SonarColor; //tex2D(_MainTex, i.uv);
 				return col;

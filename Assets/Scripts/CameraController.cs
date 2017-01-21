@@ -19,10 +19,10 @@ public class CameraController : MonoBehaviour {
         float dt = Time.deltaTime;
 
         Vector3 rel = player.transform.position - transform.position;
-        transform.position += rel.normalized * (rel.magnitude - targetDistance) * approachSpeed * Time.deltaTime;
+        transform.position += rel.normalized * (rel.magnitude - targetDistance);// * approachSpeed * Time.deltaTime;
 
-        Vector3 lookAtTarget = player.transform.position + player.transform.forward.normalized * lookAhead;
-        lookAtPosition += (lookAtTarget - lookAtPosition) * lookAtSpeed * dt;
-        transform.LookAt(lookAtPosition);
-	}
+        transform.LookAt(player.transform.position + player.transform.forward.normalized * lookAhead);
+        //Vector3 lookAtTarget = player.transform.position + player.transform.forward.normalized * lookAhead;
+        //transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(lookAtTarget - transform.position), dt * lookAtSpeed);
+    }
 }

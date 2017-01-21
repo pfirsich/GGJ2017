@@ -7,7 +7,7 @@ public class MovementController : MonoBehaviour
     private float maxSpeed = 20.0f;
     [SerializeField] float acceleration;
 
-    public Rigidbody rigidBody;
+    private Rigidbody rigidBody;
 
 	void Start ()
 	{
