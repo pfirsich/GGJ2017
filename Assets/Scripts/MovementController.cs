@@ -3,8 +3,8 @@ using System.Collections;
 
 public class MovementController : MonoBehaviour
 {
-    private float minSpeed = 1.0f;
-    private float maxSpeed = 5.0f;
+    private float minSpeed = 0.1f;
+    private float maxSpeed = 0.1f;
     [SerializeField] float acceleration;
 
     private Rigidbody rigidBody;
@@ -26,11 +26,5 @@ public class MovementController : MonoBehaviour
         if(speed > maxSpeed) rigidBody.velocity *= maxSpeed / speed;
 
         transform.LookAt(rigidBody.position + rigidBody.velocity);
-
-        //player.transform.Translate(player.transform.forward*speed*Time.deltaTime);
-	    //Vector3 movementAxis = Vector3.up * vertical + Vector3.right * horizontal;
-	    //Quaternion rot = Quaternion.FromToRotation();
-        //transform.position = player.transform.position + rot * direction;
-        //transform.localRotation = rot;
     }
 }
