@@ -3,11 +3,11 @@ using System.Collections;
 
 public class MovementController : MonoBehaviour
 {
-    private float minSpeed = 0.1f;
-    private float maxSpeed = 0.1f;
+    private float minSpeed = 15.0f;
+    private float maxSpeed = 20.0f;
     [SerializeField] float acceleration;
 
-    private Rigidbody rigidBody;
+    public Rigidbody rigidBody;
 
 	void Start ()
 	{
