@@ -108,16 +108,16 @@ Material:
       second: 0
     - first:
         name: _SonarConeFactorBias
-      second: 0
+      second: 0.8
     - first:
         name: _SonarFrontWidth
-      second: 0
+      second: 4
     - first:
         name: _SonarRadius
-      second: 591.4256
+      second: 241.19113
     - first:
         name: _SonarTailWidth
-      second: 20
+      second: 30
     - first:
         name: _SpecularHighlights
       second: 1
@@ -142,10 +142,10 @@ Material:
       second: {r: 0, g: 0.83448267, b: 1, a: 1}
     - first:
         name: _SonarDirection
-      second: {r: 0, g: 0, b: -1, a: 0}
+      second: {r: -0.76535606, g: -0.20174861, b: -0.61116904, a: 0}
     - first:
         name: _SonarPosition
-      second: {r: 54.540874, g: -46.45061, b: 86.325195, a: 1}
+      second: {r: -65.95612, g: -44.19709, b: 262.1217, a: 1}
     - first:
         name: _XColor
       second: {r: 0, g: 0, b: 0, a: 1}
