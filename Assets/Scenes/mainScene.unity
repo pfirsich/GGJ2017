@@ -208,6 +208,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b187bf400ed13b48a1568a2c1460987, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bat: {fileID: 1789032534}
   sonarMat: {fileID: 2100000, guid: c2a98149e79779544bda465bb627d8c1, type: 2}
   sonarGrowthSpeed: 50
 --- !u!114 &195540676
