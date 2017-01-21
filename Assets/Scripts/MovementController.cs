@@ -15,16 +15,24 @@ public class MovementController : MonoBehaviour
         rigidBody.velocity = new Vector3(0.0f, 0.0f, maxSpeed);
     }
 
-	// Update is called once per frame
-	void Update ()
-	{
-        Vector3 move = new Vector3(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"), 0.0f);
-        rigidBody.AddRelativeForce(move * acceleration);
-
+    void clampVelocity() {
         float speed = rigidBody.velocity.magnitude;
         if(speed < minSpeed) rigidBody.velocity *= minSpeed / speed;
         if(speed > maxSpeed) rigidBody.velocity *= maxSpeed / speed;
+    }
 
-        transform.LookAt(rigidBody.position + rigidBody.velocity);
+    // Update is called once per frame
+    void Update ()
+    {
+        clampVelocity();
+        transform.LookAt(transform.position + rigidBody.velocity);
+    }
+
+    void FixedUpdate() // before internal physics update
+    {
+        clampVelocity();
+        transform.LookAt(transform.position + rigidBody.velocity);
+        Vector3 move = new Vector3(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"), 0.0f);
+        rigidBody.AddRelativeForce(move * acceleration);
     }
 }
