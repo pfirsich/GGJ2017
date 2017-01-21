@@ -14,6 +14,7 @@ public class sonar_management : MonoBehaviour {
     private int nextSonarIndex = 0;
 
     void emitSonar(Vector4 direction) {
+        Debug.Log(nextSonarIndex);
         sonarRadiuses[nextSonarIndex] = 0.0f;
         sonarDirections[nextSonarIndex] = direction;
         Vector3 v = bat.transform.position;
@@ -40,7 +41,7 @@ public class sonar_management : MonoBehaviour {
     }
 
     void Update () {
-        if(Input.GetButton("ping")) {
+        if(Input.GetButtonDown("ping")) {
             emitSonar(bat.transform.forward);
         }
 
