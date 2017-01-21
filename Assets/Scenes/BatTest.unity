@@ -132,6 +132,11 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 34574c79920924765995156f778c69ed, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &842602859 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1000010852992522, guid: 34574c79920924765995156f778c69ed,
+    type: 2}
+  m_PrefabInternal: {fileID: 842602858}
 --- !u!1 &1061762269
 GameObject:
   m_ObjectHideFlags: 0
@@ -207,6 +212,8 @@ GameObject:
   - 92: {fileID: 2115793979}
   - 124: {fileID: 2115793978}
   - 81: {fileID: 2115793977}
+  - 114: {fileID: 2115793982}
+  - 114: {fileID: 2115793983}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -282,3 +289,34 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
+--- !u!114 &2115793982
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2115793976}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a7ec6baa9e57cc41ac01eea6977f0a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 842602859}
+  approachSpeed: 10
+  targetDistance: 10
+  lookAhead: 50
+  lookAtSpeed: 10
+  lookAtOffset: {x: 0, y: 4, z: 0}
+--- !u!114 &2115793983
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2115793976}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b187bf400ed13b48a1568a2c1460987, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bat: {fileID: 842602859}
+  sonarMat: {fileID: 2100000, guid: c2a98149e79779544bda465bb627d8c1, type: 2}
+  sonarGrowthSpeed: 0
