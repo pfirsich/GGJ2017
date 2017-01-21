@@ -41,7 +41,7 @@
 				v2f o;
 				o.vertex = mul(UNITY_MATRIX_MVP, v.vertex);
 				o.uv = TRANSFORM_TEX(v.uv, _MainTex);
-				o.viewNormal = mul(UNITY_MATRIX_IT_MV, v.normal);
+				o.viewNormal = mul(UNITY_MATRIX_IT_MV, normalize(v.normal));
 				UNITY_TRANSFER_FOG(o,o.vertex);
 				return o;
 			}
