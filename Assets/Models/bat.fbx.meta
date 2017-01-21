@@ -91,7 +91,97 @@ ModelImporter:
     animationScaleError: 0.5
     animationWrapMode: 0
     extraExposedTransformPaths: []
-    clipAnimations: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Bat|ArmatureAction
+      takeName: Bat|ArmatureAction
+      firstFrame: 0
+      lastFrame: 11
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Bat
+        weight: 1
+      - path: Bat/Backbone
+        weight: 1
+      - path: Bat/Backbone/FootL1
+        weight: 1
+      - path: Bat/Backbone/FootL1/FootL2
+        weight: 1
+      - path: Bat/Backbone/FootL1/FootL2/FootL2_end
+        weight: 1
+      - path: Bat/Backbone/FootR1
+        weight: 1
+      - path: Bat/Backbone/FootR1/FootR2
+        weight: 1
+      - path: Bat/Backbone/FootR1/FootR2/FootR2_end
+        weight: 1
+      - path: Bat/Backbone/Tail
+        weight: 1
+      - path: Bat/Backbone/Tail/Tail_end
+        weight: 1
+      - path: Bat/Neck
+        weight: 1
+      - path: Bat/Neck/EarL
+        weight: 1
+      - path: Bat/Neck/EarL/EarL_end
+        weight: 1
+      - path: Bat/Neck/EarR
+        weight: 1
+      - path: Bat/Neck/EarR/EarR_end
+        weight: 1
+      - path: Bat/Neck/Mouth
+        weight: 1
+      - path: Bat/Neck/Mouth/Mouth_end
+        weight: 1
+      - path: Bat/WingL1
+        weight: 1
+      - path: Bat/WingL1/WingL2
+        weight: 1
+      - path: Bat/WingL1/WingL2/Bone.014
+        weight: 1
+      - path: Bat/WingL1/WingL2/Bone.014/Bone.014_end
+        weight: 1
+      - path: Bat/WingL1/WingL2/Bone.015
+        weight: 1
+      - path: Bat/WingL1/WingL2/Bone.015/Bone.015_end
+        weight: 1
+      - path: Bat/WingR1
+        weight: 1
+      - path: Bat/WingR1/WingR2
+        weight: 1
+      - path: Bat/WingR1/WingR2/Bone.007
+        weight: 1
+      - path: Bat/WingR1/WingR2/Bone.007/Bone.007_end
+        weight: 1
+      - path: Bat/WingR1/WingR2/Bone.008
+        weight: 1
+      - path: Bat/WingR1/WingR2/Bone.008/Bone.008_end
+        weight: 1
+      - path: Body
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
     isReadable: 1
   meshes:
     lODScreenPercentages: []
