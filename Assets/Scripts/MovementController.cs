@@ -8,10 +8,12 @@ public class MovementController : MonoBehaviour
 
     [SerializeField]
     float speed;
+
+    Vector3 direction;
 	// Use this for initialization
 	void Start ()
 	{
-
+        direction = transform.position - player.transform.position;
     }
 	
 	// Update is called once per frame
@@ -20,8 +22,11 @@ public class MovementController : MonoBehaviour
         player.transform.Translate(player.transform.forward*speed*Time.deltaTime);
 	    float vertical = Input.GetAxis("Vertical");
 	    float horizontal = Input.GetAxis("Horizontal");
+	    Vector3 movementAxis = Vector3.up * vertical + Vector3.right * horizontal;
 
-	    Vector3 movementAxis = transform.up * vertical + transform.right * horizontal;
-        player.transform.localRotation = Quaternion.FromToRotation(player.transform.forward, movementAxis.normalized);
+
+	    Quaternion rot = Quaternion.FromToRotation();
+        transform.position = player.transform.position + rot * direction;
+        transform.localRotation = rot;
     }
 }
