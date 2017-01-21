@@ -8,7 +8,7 @@ Material:
   m_PrefabInternal: {fileID: 0}
   m_Name: SonarMaterial
   m_Shader: {fileID: 4800000, guid: dc135b80049b17e4785f4ca956819f04, type: 3}
-  m_ShaderKeywords: _EMISSION
+  m_ShaderKeywords: _EMISSION _SonarDirection _SonarRadius
   m_LightmapFlags: 1
   m_CustomRenderQueue: -1
   stringTagMap: {}
@@ -114,7 +114,7 @@ Material:
       second: 0
     - first:
         name: _SonarRadius
-      second: 55.521507
+      second: 219.89128
     - first:
         name: _SonarTailWidth
       second: 20
