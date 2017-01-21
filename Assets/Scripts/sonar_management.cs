@@ -29,7 +29,7 @@ public class sonar_management : MonoBehaviour {
             sonarDirections[i] = new Vector4(0.0f, 0.0f, -1.0f, 0.0f);
         }
 
-        InvokeRepeating("emitSonarFoward", 0.0f, 1.0f);
+        InvokeRepeating("emitSonarFoward", 0.0f, 1000.0f);
     }
 
     void Update () {
