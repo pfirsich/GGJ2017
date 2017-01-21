@@ -114,7 +114,7 @@ Material:
       second: 4
     - first:
         name: _SonarRadius
-      second: 601.0474
+      second: 584.6564
     - first:
         name: _SonarTailWidth
       second: 30
@@ -142,10 +142,10 @@ Material:
       second: {r: 0, g: 0.83448267, b: 1, a: 1}
     - first:
         name: _SonarDirection
-      second: {r: 0, g: 0, b: -1, a: 0}
+      second: {r: 0.5137771, g: 0.027055172, b: 0.85749704, a: 0}
     - first:
         name: _SonarPosition
-      second: {r: 0, g: 0, b: 0, a: 0}
+      second: {r: -58.88697, g: 26.851463, b: 21.565859, a: 1}
     - first:
         name: _XColor
       second: {r: 0, g: 0, b: 0, a: 1}
