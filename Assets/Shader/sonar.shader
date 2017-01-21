@@ -7,6 +7,8 @@
 		_SonarFrontWidth ("sonarFrontWidth", Float) = 1.0
 		_SonarTailWidth ("sonarTailWidth", Float) = 4.0
 		_SonarConeFactorBias ("sonarConeFactorBias", Float) = 0.9
+		_SonarMinFalloff ("sonarMinFalloff", Float) = 500
+		_SonarMaxFalloff ("sonarMaxFalloff", Float) = 800
 	}
 	SubShader
 	{
@@ -34,6 +36,7 @@
 				UNITY_FOG_COORDS(1)
 				float4 vertex : SV_POSITION;
 				float4 worldSpacePos : TEXCOORD6;
+				float4 viewSpacePos : TEXCOORD7;
 			};
 
 			sampler2D _MainTex;
@@ -70,12 +73,15 @@
 			float _SonarFrontWidth;
 			float _SonarTailWidth;
 			float _SonarConeFactorBias;
+			float _SonarMinFalloff;
+			float _SonarMaxFalloff;
 
 			v2f vert (appdata v)
 			{
 				v2f o;
 				o.vertex = mul(UNITY_MATRIX_MVP, v.vertex);
 				o.worldSpacePos = mul(UNITY_MATRIX_M, v.vertex);
+				o.viewSpacePos = mul(UNITY_MATRIX_MV, v.vertex);
 				o.uv = TRANSFORM_TEX(v.uv, _MainTex);
 				UNITY_TRANSFER_FOG(o,o.vertex);
 				return o;
@@ -115,13 +121,15 @@
 
 				float t = _Time.w * 0.015;
 				float thickness = 0.002;
-				float _noise = snoise(i.worldSpacePos * 0.01 + float3(1, 1, 0) * t);
+				float frequency = lerp(0.005, 0.0003, length(i.viewSpacePos) / 1000.0);
+				float _noise = snoise(i.worldSpacePos * frequency + float3(1, 1, 0) * t);
 				float waveEffect = 0.0;
 				const int steps = 30;
 				for(int w = -steps + 1; w < steps; ++w) {
 					waveEffect += sonarEnvelope(_noise + 1.0/steps*w, thickness, thickness);
 				}
-				brightness *= saturate(waveEffect) * 3.0;
+				brightness *= saturate(waveEffect) * 6.0;
+				brightness *= 1.0 - smoothstep(_SonarMinFalloff, _SonarMaxFalloff, length(i.viewSpacePos));
 
 				fixed4 col = float4(float3(brightness, brightness, brightness), 1.0) * _SonarColor; //tex2D(_MainTex, i.uv);
 				return col;

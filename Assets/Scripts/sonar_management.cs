@@ -7,7 +7,7 @@ public class sonar_management : MonoBehaviour {
     public Material sonarMat;
     public float sonarGrowthSpeed;
 
-    private const int MAX_SONAR_COUNT = 8;
+    private const int MAX_SONAR_COUNT = 4;
     private float[] sonarRadiuses;
     private Vector4[] sonarDirections;
     private Vector4[] sonarPositions;

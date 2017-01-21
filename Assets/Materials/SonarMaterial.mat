@@ -111,13 +111,19 @@ Material:
       second: 0.8
     - first:
         name: _SonarFrontWidth
-      second: 4
+      second: 5
+    - first:
+        name: _SonarMaxFalloff
+      second: 800
+    - first:
+        name: _SonarMinFalloff
+      second: 300
     - first:
         name: _SonarRadius
-      second: 584.6564
+      second: 435.13284
     - first:
         name: _SonarTailWidth
-      second: 30
+      second: 80
     - first:
         name: _SpecularHighlights
       second: 1
@@ -142,10 +148,10 @@ Material:
       second: {r: 0, g: 0.83448267, b: 1, a: 1}
     - first:
         name: _SonarDirection
-      second: {r: 0.5137771, g: 0.027055172, b: 0.85749704, a: 0}
+      second: {r: -0.108593814, g: -0.02824651, b: 0.9936848, a: 0}
     - first:
         name: _SonarPosition
-      second: {r: -58.88697, g: 26.851463, b: 21.565859, a: 1}
+      second: {r: 705.0511, g: 49.23298, b: 291.97272, a: 1}
     - first:
         name: _XColor
       second: {r: 0, g: 0, b: 0, a: 1}
