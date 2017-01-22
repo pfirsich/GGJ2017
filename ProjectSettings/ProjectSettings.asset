@@ -74,6 +74,7 @@ PlayerSettings:
   ignoreAlphaClear: 0
   xboxOneResolution: 0
   xboxOneMonoLoggingLevel: 0
+  xboxOneLoggingLevel: 1
   ps3SplashScreen: {fileID: 0}
   videoMemoryForVertexBuffers: 0
   psp2PowerMode: 0
@@ -93,15 +94,23 @@ PlayerSettings:
     16:10: 1
     16:9: 1
     Others: 1
-  bundleIdentifier: com.Company.ProductName
+  bundleIdentifier: com.AngryBusinessDuck
   bundleVersion: 1.0
   preloadedAssets: []
   metroEnableIndependentInputSource: 0
   xboxOneDisableKinectGpuReservation: 0
   singlePassStereoRendering: 0
+  vrSettings:
+    cardboard:
+      depthFormat: 0
+      enableTransitionView: 0
+    google:
+      depthFormat: 0
+      useSustainedPerformanceMode: 0
+  vrSplashScreenShouldntTagAlong: 0
   protectGraphicsMemory: 0
   AndroidBundleVersionCode: 1
-  AndroidMinSdkVersion: 9
+  AndroidMinSdkVersion: 24
   AndroidPreferredInstallLocation: 1
   aotOptions: 
   apiCompatibilityLevel: 2
@@ -122,6 +131,7 @@ PlayerSettings:
   iPhoneTargetOSVersion: 24
   tvOSSdkVersion: 0
   tvOSTargetOSVersion: 900
+  tvOSRequireExtendedGameController: 0
   uIPrerenderedIcon: 0
   uIRequiresPersistentWiFi: 0
   uIRequiresFullScreen: 1
@@ -161,6 +171,7 @@ PlayerSettings:
   iOSLaunchScreeniPadCustomXibPath: 
   iOSDeviceRequirements: []
   iOSURLSchemes: []
+  appleDeveloperTeamID: 
   AndroidTargetDevice: 0
   AndroidSplashScreenScale: 0
   androidSplashScreen: {fileID: 0}
@@ -175,9 +186,18 @@ PlayerSettings:
     banner: {fileID: 0}
   androidGamepadSupportLevel: 0
   resolutionDialogBanner: {fileID: 0}
-  m_BuildTargetIcons: []
+  m_BuildTargetIcons:
+  - m_BuildTarget: 
+    m_Icons:
+    - serializedVersion: 2
+      m_Icon: {fileID: 0}
+      m_Width: 128
+      m_Height: 128
   m_BuildTargetBatching: []
-  m_BuildTargetGraphicsAPIs: []
+  m_BuildTargetGraphicsAPIs:
+  - m_BuildTarget: AndroidPlayer
+    m_APIs: 0b00000008000000
+    m_Automatic: 1
   webPlayerTemplate: APPLICATION:Default
   m_TemplateCustomTags: {}
   wiiUTitleID: 0005000011000000
@@ -196,12 +216,15 @@ PlayerSettings:
   wiiUSystemHeapSize: 128
   wiiUTVStartupScreen: {fileID: 0}
   wiiUGamePadStartupScreen: {fileID: 0}
+  wiiUDrcBufferDisabled: 0
   wiiUProfilerLibPath: 
   actionOnDotNetUnhandledException: 1
   enableInternalProfiler: 0
   logObjCUncaughtExceptions: 1
   enableCrashReportAPI: 0
+  cameraUsageDescription: 
   locationUsageDescription: 
+  microphoneUsageDescription: 
   XboxTitleId: 
   XboxImageXexPath: 
   XboxSpaPath: 
@@ -241,7 +264,8 @@ PlayerSettings:
   ps4AppType: 0
   ps4ParamSfxPath: 
   ps4VideoOutPixelFormat: 0
-  ps4VideoOutResolution: 4
+  ps4VideoOutInitialWidth: 1920
+  ps4VideoOutReprojectionRate: 120
   ps4PronunciationXMLPath: 
   ps4PronunciationSIGPath: 
   ps4BackgroundImagePath: 
@@ -270,14 +294,18 @@ PlayerSettings:
   ps4pnFriends: 1
   ps4pnGameCustomData: 1
   playerPrefsSupport: 0
+  ps4UseResolutionFallback: 0
+  restrictedAudioUsageRights: 0
   ps4ReprojectionSupport: 0
   ps4UseAudio3dBackend: 0
   ps4SocialScreenEnabled: 0
+  ps4ScriptOptimizationLevel: 3
   ps4Audio3dVirtualSpeakerCount: 14
   ps4attribCpuUsage: 0
   ps4PatchPkgPath: 
   ps4PatchLatestPkgPath: 
   ps4PatchChangeinfoPath: 
+  ps4PatchDayOne: 0
   ps4attribUserManagement: 0
   ps4attribMoveSupport: 0
   ps4attrib3DSupport: 0
@@ -367,6 +395,7 @@ PlayerSettings:
   tizenSigningProfileName: 
   tizenGPSPermissions: 0
   tizenMicrophonePermissions: 0
+  tizenMinOSVersion: 0
   n3dsUseExtSaveData: 0
   n3dsCompressStaticMem: 1
   n3dsExtSaveDataNumber: 0x12345
@@ -402,9 +431,15 @@ PlayerSettings:
   XboxOneSplashScreen: {fileID: 0}
   XboxOneAllowedProductIds: []
   XboxOnePersistentLocalStorageSize: 0
+  vrEditorSettings:
+    google:
+      daydreamIconForeground: {fileID: 0}
+      daydreamIconBackground: {fileID: 0}
   intPropertyNames:
+  - Android::ScriptingBackend
   - Standalone::ScriptingBackend
   - WebPlayer::ScriptingBackend
+  Android::ScriptingBackend: 0
   Standalone::ScriptingBackend: 0
   WebPlayer::ScriptingBackend: 0
   boolPropertyNames:
@@ -426,7 +461,7 @@ PlayerSettings:
   - XboxOne::enus
   - iOS::VR::enable
   - tvOS::VR::enable
-  Android::VR::enable: 0
+  Android::VR::enable: 1
   Metro::VR::enable: 0
   N3DS::VR::enable: 0
   PS3::VR::enable: 0
@@ -482,7 +517,7 @@ PlayerSettings:
   - iOS::VR::enabledDevices
   - tvOS::VR::enabledDevices
   Android::VR::enabledDevices:
-  - Oculus
+  - daydream
   Metro::VR::enabledDevices: []
   N3DS::VR::enabledDevices: []
   PS3::VR::enabledDevices: []
