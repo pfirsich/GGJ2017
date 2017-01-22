@@ -5039,26 +5039,6 @@ GameObject:
   m_PrefabParentObject: {fileID: 1000010852992522, guid: 34574c79920924765995156f778c69ed,
     type: 2}
   m_PrefabInternal: {fileID: 867918954}
---- !u!136 &411246368
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 411246367}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 1
-  m_Height: 3.5
-  m_Direction: 2
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!81 &411246373
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 411246367}
-  m_Enabled: 1
 --- !u!1 &416400097
 GameObject:
   m_ObjectHideFlags: 0
@@ -10043,70 +10023,7 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 65000013209426428, guid: 34574c79920924765995156f778c69ed,
-        type: 2}
-      propertyPath: m_Size.z
-      value: 3.658023
-      objectReference: {fileID: 0}
-    - target: {fileID: 65000013209426428, guid: 34574c79920924765995156f778c69ed,
-        type: 2}
-      propertyPath: m_Center.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 65000013209426428, guid: 34574c79920924765995156f778c69ed,
-        type: 2}
-      propertyPath: m_Center.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 54000010753218290, guid: 34574c79920924765995156f778c69ed,
-        type: 2}
-      propertyPath: m_Mass
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 114000011565783042, guid: 34574c79920924765995156f778c69ed,
-        type: 2}
-      propertyPath: acceleration
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 54000010753218290, guid: 34574c79920924765995156f778c69ed,
-        type: 2}
-      propertyPath: m_IsKinematic
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 54000010753218290, guid: 34574c79920924765995156f778c69ed,
-        type: 2}
-      propertyPath: m_CollisionDetection
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 65000013209426428, guid: 34574c79920924765995156f778c69ed,
-        type: 2}
-      propertyPath: m_Center.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 54000010753218290, guid: 34574c79920924765995156f778c69ed,
-        type: 2}
-      propertyPath: m_AngularDrag
-      value: 0.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4000012424236506, guid: 34574c79920924765995156f778c69ed, type: 2}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4000012424236506, guid: 34574c79920924765995156f778c69ed, type: 2}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4000012424236506, guid: 34574c79920924765995156f778c69ed, type: 2}
-      propertyPath: m_LocalScale.z
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114000011565783042, guid: 34574c79920924765995156f778c69ed,
-        type: 2}
-      propertyPath: _ZAccel
-      value: 5
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 65000013209426428, guid: 34574c79920924765995156f778c69ed, type: 2}
+    m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 34574c79920924765995156f778c69ed, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &871929932
@@ -17054,7 +16971,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4000013124806654, guid: 111becec1262da34c8d18948dfe019ae, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 48
       objectReference: {fileID: 0}
     - target: {fileID: 4000013124806654, guid: 111becec1262da34c8d18948dfe019ae, type: 2}
       propertyPath: m_LocalPosition.z
@@ -22638,8 +22555,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 43.160736, y: 1.4722451, z: 42.002842}
-  m_Center: {x: -0.9861776, y: 3.3502564, z: -0.631779}
+  m_Size: {x: 43.160736, y: 1.5742389, z: 42.002842}
+  m_Center: {x: -0.9861776, y: 3.2992642, z: -0.631779}
 --- !u!1 &1986306924
 GameObject:
   m_ObjectHideFlags: 0
