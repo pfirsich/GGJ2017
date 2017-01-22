@@ -4,6 +4,8 @@ using System.Collections;
 public class sonar_management : MonoBehaviour {
     [SerializeField] GameObject bat;
 
+    public static sonar_management instance;
+
     public Material sonarMat;
     public float sonarGrowthSpeed;
 
@@ -28,7 +30,9 @@ public class sonar_management : MonoBehaviour {
         emitSonar(new Vector4(0.0f, 0.0f, -1.0f, 0.0f));
     }
 
-    void Start () {
+    void Start ()
+    {
+        instance = this;
         sonarRadiuses = new float[MAX_SONAR_COUNT];
         sonarDirections = new Vector4[MAX_SONAR_COUNT];
         sonarPositions = new Vector4[MAX_SONAR_COUNT];
