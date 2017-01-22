@@ -15,7 +15,7 @@ public class sonar_management : MonoBehaviour {
     private Vector4[] sonarPositions;
     private int nextSonarIndex = 0;
 
-    void emitSonar(Vector4 direction) {
+    public void emitSonar(Vector4 direction) {
         Debug.Log(nextSonarIndex);
         sonarRadiuses[nextSonarIndex] = 0.0f;
         sonarDirections[nextSonarIndex] = direction;
