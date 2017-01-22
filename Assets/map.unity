@@ -5206,7 +5206,7 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 8
+  m_Radius: 4.3099976
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!81 &411246373
 AudioListener:
@@ -10564,7 +10564,7 @@ Prefab:
     - target: {fileID: 114000011565783042, guid: 34574c79920924765995156f778c69ed,
         type: 2}
       propertyPath: acceleration
-      value: 30
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 54000010753218290, guid: 34574c79920924765995156f778c69ed,
         type: 2}
@@ -10597,6 +10597,11 @@ Prefab:
     - target: {fileID: 4000012424236506, guid: 34574c79920924765995156f778c69ed, type: 2}
       propertyPath: m_LocalScale.z
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000011565783042, guid: 34574c79920924765995156f778c69ed,
+        type: 2}
+      propertyPath: _ZAccel
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 34574c79920924765995156f778c69ed, type: 2}
@@ -16665,9 +16670,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 411246367}
   approachSpeed: 10
-  targetDistance: 10
-  lookAhead: 50
+  targetDistance: 5
+  lookAhead: 30
   lookAtSpeed: 10
+  backOffset: 20
 --- !u!114 &1324289364
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24170,7 +24176,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 703a6278fd7793448b5b3397ea931a1d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxSpeed: 10
   acceleration: 10
+  _ZAccel: 0
 --- !u!1 &2010290758
 GameObject:
   m_ObjectHideFlags: 0
