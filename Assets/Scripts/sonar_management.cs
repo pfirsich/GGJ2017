@@ -15,6 +15,8 @@ public class sonar_management : MonoBehaviour {
     private Vector4[] sonarPositions;
     private int nextSonarIndex = 0;
 
+	private AudioSource audio;
+
     public void emitSonar(Vector4 direction) {
         Debug.Log(nextSonarIndex);
         sonarRadiuses[nextSonarIndex] = 0.0f;
@@ -40,6 +42,7 @@ public class sonar_management : MonoBehaviour {
             sonarRadiuses[i] = 0;
             sonarDirections[i] = new Vector4(0.0f, 0.0f, -1.0f, 0.0f);
         }
+		audio = bat.GetComponent<AudioSource>();
 
         InvokeRepeating("emitSonarFoward", 0.0f, 1000.0f);
     }
@@ -47,6 +50,7 @@ public class sonar_management : MonoBehaviour {
     void Update () {
         if(Input.GetButtonDown("ping")) {
             emitSonar(bat.transform.forward);
+			audio.Play();
         }
 
         float dt = Time.deltaTime;
