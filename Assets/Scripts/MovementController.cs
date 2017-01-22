@@ -35,4 +35,11 @@ public class MovementController : MonoBehaviour
         Vector3 move = new Vector3(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"), 0.0f);
         rigidBody.AddRelativeForce(move * acceleration);
     }
+
+	void OnCollisionEnter(Collision collision)	{
+		if (collision.transform.gameObject != gameObject) {
+			Debug.LogFormat("HIT {0}", collision.transform.gameObject.name);
+			rigidBody.velocity /= 2F;
+		}
+	}
 }
